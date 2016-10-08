@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jackson's Deli and Market</title>
+  <base href="/">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @font-face {
+      font-family: 'Gloria Hallelujah';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Gloria Hallelujah'), 
+           local('GloriaHallelujah'), 
+           url(assets/GloriaHallelujah.woff2) format('woff2'), 
+           url(assets/GloriaHallelujah.ttf) format('truetype');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    }
+    body {
+      font-family: 'Gloria Hallelujah', cursive;
+      font-size: 1em;
+      color:rgba(244, 244, 240, 1);
+      text-shadow:0 0 2px rgba(255,255,255,0.3);
+      background-color: #414143;
+      background-image: linear-gradient(to left, #414143,#262223);
+    }
+  </style>
+</head>
+<body>
+  <sando-app></sando-app>
+
+  <script src="vendor/core-js/client/shim.min.js"></script>
+  <script src="vendor/reflect-metadata/Reflect.js"></script>
+  <script src="vendor/systemjs/dist/system.src.js"></script>
+  <script src="vendor/zone.js/dist/zone.js"></script>
+  <script src="systemjs.config.js"></script>
+
+  <script>
+    System.import('app').catch(function(err){ console.error(err); });
+  </script>
+</body>
+</html>

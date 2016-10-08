@@ -1,0 +1,228 @@
+:host {
+  display: block;
+  padding: 2em;
+  margin-bottom: 40px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul > li {
+  margin-bottom: 4px;
+}
+h2 {
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+  color: rgb(148, 192, 204);
+}
+form > section {
+  margin-bottom: 2em;
+}
+form > section > h1 {
+  font-size: 2em;
+  padding: 10px;
+  text-transform: uppercase;
+  border-bottom: 4px solid rgba(244, 244, 240, 1);
+  position: relative;
+  margin-bottom: 1em;
+}
+form > section > h1:before {
+  content: " ";
+  position: absolute;
+  border-bottom: 3px dotted rgba(244, 244, 240, 1);
+  width: 100%;
+  bottom: -14px;
+  left: 0;
+}
+form > section > section > h1 {
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+form > section > section {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-size: 1.4em;
+  cursor: pointer;
+}
+label:hover, input:checked+label {
+  color: #fad48b;
+}
+input[type=text], 
+textarea, 
+select, 
+select option {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+input[type=text],
+textarea {
+  border: 0;
+  font-size: 1.6em;
+  padding: 4px;
+  color: #fad48b;
+  background-color: transparent;
+}
+input[type=text] {
+  border-bottom: 2px solid rgba(244, 244, 240, 0.6);
+}
+input[type=text]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+textarea {
+  border: 2px solid rgba(244, 244, 240, 0.6);
+  width: 98%;
+  height: 150px;
+}
+select {
+  border: 0;
+  border-bottom: 2px solid rgba(244, 244, 240, 0.6);;
+  font-size: 1.6em;
+  padding: 4px;
+  cursor: pointer;
+  color: #fad48b;
+  background-color: transparent;
+}
+select option {
+  background-color: #262223;
+}
+input[type=checkbox], input[type=radio] {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  margin: 20px auto;
+}
+button {
+  font-family: 'Gloria Hallelujah', cursive;
+  cursor: pointer;
+  position: relative;
+  font-size: 2em;
+  border: 2px solid rgb(250, 212, 139);
+  border-radius: 8px;
+  background-color: rgb(250, 212, 139);
+  color: #262223;
+  padding: 12px;
+}
+button:before {
+  content: ' ';
+  position: absolute;
+  border: 4px solid #262223;
+  border-radius: 8px;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+button:hover {
+  background-color: rgb(148, 192, 204);
+  border-color: rgb(148, 192, 204);
+}
+button:focus {
+  outline: none;
+}
+.customer-name input[type=text] {
+  width: 100%;
+}
+.customer-name input[type=text].ng-untouched.ng-pristine {
+  border-width: 4px;
+  border-color: rgb(250, 212, 139);
+}
+.welcome-back {
+  font-size: 1.6em;
+  color: #262223;
+  background-color: rgba(188, 223, 138, 1);
+  padding: 0 1em;
+  border-radius: 12px;
+  position: fixed;
+  bottom: 14px;
+  right: 14px;
+  z-index: 2;
+}
+.size ul > li {
+  display: inline-block;
+  margin-right: 2em;
+}
+.weird-requests button {
+  font-size: 1em;
+}
+.weird-requests input[type=text] {
+  font-size: 1.6em;
+  width: 80%;
+  width: calc(100% - 6em);
+}
+.specialty-sandwiches label {
+  font-size: 1.6em;
+}
+.build-your-own {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.build-your-own > h1, .build-your-own > section {
+  flex: 1 100%;
+}
+@media all and (min-width: 949px) {
+  .build-your-own > section { flex: 1 auto; }
+}
+@media only screen and (max-width: 948px) {
+  .build-your-own > section { flex: 1 50%; }
+}
+@media only screen and (max-width: 565px) {
+  :host {
+    font-size: .6em;
+  }
+  input[type=checkbox], input[type=radio] {
+    width: 20px;
+    height: 20px;
+    margin: 14px auto;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .build-your-own > section {
+    flex: 1 100%;
+  }
+  .weird-requests input[type=text] {
+    width: calc(100% - 8em);
+  }
+  .weird-requests button {
+    font-size: 1.6em;
+  }
+  button {
+    padding: 2px;
+  }
+  button:before {
+    border: 0;
+    font-size: 2em;
+  }
+}
+
+
+.errors {
+  color: rgba(237, 119, 119, 1);
+  font-size: 1.6em;
+}
+input[type=text].ng-invalid,
+select.ng-invalid,
+textarea.ng-invalid {
+  border-width: 3px;
+  border-bottom-color: rgba(237, 119, 119, 1);
+}
+textarea.ng-invalid {
+  border-color: rgba(237, 119, 119, 1);
+}
+.ng-invalid+label {
+  color: rgba(237, 119, 119, 1);
+}
+button:disabled {
+  background-color: rgba(246, 244, 241, 1);
+  border-color: rgba(246, 244, 241, 1);
+  cursor: default;
+  color: rgba(65, 65, 67, .8);
+}
+button:disabled:before {
+  border-color: rgba(65, 65, 67, .8);
+}

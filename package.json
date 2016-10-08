@@ -1,0 +1,38 @@
+{
+  "name": "angular2-series-app-forms",
+  "version": "1.0.0",
+  "author": "Justin Schwartzenberger",
+  "description": "This project is the repository for my Angular 2 Forms: Data Binding and Validation course on Lynda.com.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coursefiles/angular2-reactive-forms-data-and-validation.git"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0",
+    "@angular/compiler": "2.0.0",
+    "@angular/core": "2.0.0",
+    "@angular/forms": "2.0.0",
+    "@angular/http": "2.0.0",
+    "@angular/platform-browser": "2.0.0",
+    "@angular/platform-browser-dynamic": "2.0.0",
+    "systemjs": "0.19.27",
+    "core-js": "2.4.1",
+    "reflect-metadata": "0.1.3",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "0.6.23"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.34",
+    "@types/node": "^6.0.41",
+    "del": "2.2.1",
+    "gulp": "3.9.1",
+    "gulp-sourcemaps": "1.6.0",
+    "gulp-typescript": "3.0.2",
+    "gulp-webserver": "0.9.1",
+    "run-sequence": "1.2.1",
+    "typescript": "2.0.2"
+  }
+}

@@ -1,0 +1,117 @@
+<h2>Order Sheet</h2>
+<form novalidate>
+  <section class="customer-name">
+    <input type="text" placeholder="Your Name">
+  </section>
+  <section class="size">
+    <h1>Pick your size</h1>
+    <ul>
+      <li>
+        <input id="sizeSmall" type="radio" value="small">
+        <label for="sizeSmall">Small</label>
+      </li>
+      <li>
+        <input id="sizeLarge" type="radio" value="large">
+        <label for="sizeLarge">Large</label>
+      </li>
+    </ul>
+  </section>
+  <section class="specialty-sandwiches">
+    <h1>Specialty Sandwiches</h1>
+    <label>Me wants:</label>
+    <select>
+      <option value=""></option>
+      <option value="The Grinder">The Grinder</option>
+      <option value="Cordon Bleu">Cordon Bleu</option>
+      <option value="Cali Cheesesteak">Cali Cheesesteak</option>
+    </select>
+  </section>
+  <section class="build-your-own">
+    <h1>Build Your Own</h1>
+    <section>
+      <h1>A Bread</h1>
+      <ul>
+        <li>
+          <input id="breadWheatRoll" type="radio" value="wheat roll">
+          <label for="breadWheatRoll">Wheat Roll</label>
+        </li>
+        <li>
+          <input id="breadWhiteRoll" type="radio" value="white roll">
+          <label for="breadWhiteRoll">White Roll</label>
+        </li>
+        <li>
+          <input id="breadSourdoughRoll" type="radio" value="sourdough roll">
+          <label for="breadSourdoughRoll">Sourdough Roll</label>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>The Meats</h1>
+      <ul>
+        <li>
+          <input id="meatHam" type="checkbox">
+          <label for="meatHam">Ham</label>
+        </li>
+        <li>
+          <input id="meatTurkey" type="checkbox">
+          <label for="meatTurkey">Turkey</label>
+        </li>
+        <li>
+          <input id="meatRoastBeef" type="checkbox">
+          <label for="meatRoastBeef">Roast Beef</label>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>The Cheeses</h1>
+      <ul>
+        <li>
+          <input id="cheeseProvolone" type="checkbox">
+          <label for="cheeseProvolone">Provolone</label>
+        </li>
+        <li>
+          <input id="cheeseCheddar" type="checkbox">
+          <label for="cheeseCheddar">Cheddar</label>
+        </li>
+        <li>
+          <input id="cheeseSwiss" type="checkbox">
+          <label for="cheeseSwiss">Swiss</label>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Veggies 'n Such</h1>
+      <ul>
+        <li>
+          <input id="veggieLettuce" type="checkbox">
+          <label for="veggieLettuce">Lettuce</label>
+        </li>
+        <li>
+          <input id="veggieTomato" type="checkbox">
+          <label for="veggieTomato">Tomato</label>
+        </li>
+        <li>
+          <input id="veggieMustard" type="checkbox">
+          <label for="veggieMustard">Mustard</label>
+        </li>
+      </ul>
+    </section>
+  </section>
+  <section class="weird-requests">
+    <h1>Weird Requests</h1>
+    <ul>
+      <li>
+        <input type="text">
+        <button type="button" title="Remove Request">Remove</button>
+      </li>
+    </ul>
+    <button type="button">Add a Request</button>
+  </section>
+  <section>
+    <h1>Other Notes</h1>
+    <textarea></textarea>
+  </section>
+  <button type="submit">Place Order</button>
+  <button type="button">Reset</button>
+</form>
+<debug-panel></debug-panel>

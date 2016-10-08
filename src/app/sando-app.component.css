@@ -1,0 +1,23 @@
+h1 {
+  margin: 0;
+  padding-left: 1em;
+  font-size: 4em;
+}
+@media only screen and (max-width: 948px) {
+  h1 {
+    font-size: 3em;
+    padding-left: .6em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.8em;
+    padding-left: .5em;
+  }
+}
+@media only screen and (max-width: 565px) {
+  h1 {
+    font-size: 1.8em;
+    padding-left: .4em;
+  }
+}
