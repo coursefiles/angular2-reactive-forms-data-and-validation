@@ -9,6 +9,7 @@ import { FormGroup, FormBuilder, FormControl, FormArray } from '@angular/forms';
 export class OrderSheetComponent {
   orderSheetForm: FormGroup;
   weirdRequestsControls: FormArray;
+  showWelcomeMessage = false;
 
   constructor(private formBuilder: FormBuilder) {
     this.buildForm();
@@ -41,6 +42,10 @@ export class OrderSheetComponent {
       })      
     });
     this.weirdRequestsControls = this.orderSheetForm.get('weirdRequests') as FormArray;
+    this.orderSheetForm.get('customerName').valueChanges
+      .subscribe(value => {
+        this.showWelcomeMessage = value.toLowerCase().trim() === 'justin s.';
+      });
   }
 
   onAddWeirdRequest() {
