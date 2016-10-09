@@ -26,7 +26,7 @@
       <option value="Cali Cheesesteak">Cali Cheesesteak</option>
     </select>
   </section>
-  <section class="build-your-own">
+  <section *ngIf="!orderSheetForm.get('specialtySandwich').value" class="build-your-own">
     <h1>Build Your Own</h1>
     <section>
       <h1>A Bread</h1>
