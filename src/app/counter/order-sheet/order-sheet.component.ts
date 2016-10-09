@@ -47,5 +47,7 @@ export class OrderSheetComponent {
     this.weirdRequestsControls.push(this.formBuilder.control(null));
   }
 
-  onRemoveWeirdRequest(index) {}
+  onRemoveWeirdRequest(index) {
+    this.weirdRequestsControls.removeAt(index);
+  }
 }
