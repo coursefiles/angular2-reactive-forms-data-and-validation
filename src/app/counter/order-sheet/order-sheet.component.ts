@@ -48,4 +48,8 @@ export class OrderSheetComponent {
   }
 
   onRemoveWeirdRequest(index) {}
+
+  onResetForm() {
+    this.orderSheetForm.reset();
+  }
 }
