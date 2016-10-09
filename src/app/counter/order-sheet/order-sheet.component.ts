@@ -20,7 +20,7 @@ export class OrderSheetComponent {
       size: this.formBuilder.control(null),
       bread: this.formBuilder.control(null),
       specialtySandwich: this.formBuilder.control(null),
-      wierdRequests: this.formBuilder.array([
+      weirdRequests: this.formBuilder.array([
         this.formBuilder.control(null)
       ]),
       otherNotes: this.formBuilder.control(null),
@@ -47,7 +47,9 @@ export class OrderSheetComponent {
     this.weirdRequestsControls.push(this.formBuilder.control(null));
   }
 
-  onRemoveWeirdRequest(index) {}
+  onRemoveWeirdRequest(index) {
+    this.weirdRequestsControls.removeAt(index);
+  }
 
   onResetForm() {
     this.orderSheetForm.reset();
