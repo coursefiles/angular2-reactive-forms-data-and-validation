@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'order-sheet',
@@ -8,6 +8,7 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 })
 export class OrderSheetComponent {
   orderSheetForm: FormGroup;
+  weirdRequestsControls: FormArray;
 
   constructor(private formBuilder: FormBuilder) {
     this.buildForm();
@@ -19,6 +20,9 @@ export class OrderSheetComponent {
       size: this.formBuilder.control(null),
       bread: this.formBuilder.control(null),
       specialtySandwich: this.formBuilder.control(null),
+      wierdRequests: this.formBuilder.array([
+        this.formBuilder.control(null)
+      ]),
       otherNotes: this.formBuilder.control(null),
       meats: this.formBuilder.group({
         meatHam: this.formBuilder.control(null),
@@ -36,5 +40,12 @@ export class OrderSheetComponent {
         veggieMustard: this.formBuilder.control(null)
       })      
     });
+    this.weirdRequestsControls = this.orderSheetForm.get('weirdRequests') as FormArray;
   }
+
+  onAddWeirdRequest() {
+    this.weirdRequestsControls.push(this.formBuilder.control(null));
+  }
+
+  onRemoveWeirdRequest(index) {}
 }
