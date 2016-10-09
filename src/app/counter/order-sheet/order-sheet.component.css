@@ -127,6 +127,10 @@ button:focus {
 .customer-name input[type=text] {
   width: 100%;
 }
+.customer-name input[type=text].ng-untouched {
+  border-width: 4px;
+  border-color: rgb(250, 212, 139);
+}
 .welcome-back {
   font-size: 1.6em;
   color: #262223;
