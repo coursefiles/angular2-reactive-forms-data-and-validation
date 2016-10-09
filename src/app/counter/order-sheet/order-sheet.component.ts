@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, FormArray, Validators } from '@angular/forms';
 
 @Component({
   selector: 'order-sheet',
@@ -10,6 +10,7 @@ export class OrderSheetComponent {
   orderSheetForm: FormGroup;
   weirdRequestsControls: FormArray;
   showWelcomeMessage = false;
+  customerNameControl;
 
   constructor(private formBuilder: FormBuilder) {
     this.buildForm();
@@ -17,7 +18,7 @@ export class OrderSheetComponent {
   
   private buildForm() {
     this.orderSheetForm = this.formBuilder.group({
-      customerName: this.formBuilder.control(null),
+      customerName: this.formBuilder.control(null, [Validators.required, Validators.minLength(2)]),
       size: this.formBuilder.control(null),
       bread: this.formBuilder.control(null),
       specialtySandwich: this.formBuilder.control(null),
@@ -42,7 +43,8 @@ export class OrderSheetComponent {
       })      
     });
     this.weirdRequestsControls = this.orderSheetForm.get('weirdRequests') as FormArray;
-    this.orderSheetForm.get('customerName').valueChanges
+    this.customerNameControl = this.orderSheetForm.get('customerName');
+    this.customerNameControl.valueChanges
       .subscribe(value => {
         this.showWelcomeMessage = value.toLowerCase().trim() === 'justin s.';
       });
