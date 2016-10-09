@@ -1,5 +1,5 @@
 <h2>Order Sheet</h2>
-<form novalidate [formGroup]="orderSheetForm">
+<form novalidate [formGroup]="orderSheetForm" (click)="onSubmitForm()">
   <section class="customer-name">
     <input type="text" placeholder="Your Name">
   </section>
@@ -112,6 +112,6 @@
     <textarea></textarea>
   </section>
   <button type="submit">Place Order</button>
-  <button type="button">Reset</button>
+  <button type="button" (click)="onResetForm()">Reset</button>
 </form>
-<debug-panel></debug-panel>
+<debug-panel [data]="orderSheetForm.value"></debug-panel>

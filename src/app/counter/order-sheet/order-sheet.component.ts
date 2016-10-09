@@ -52,4 +52,8 @@ export class OrderSheetComponent {
   onResetForm() {
     this.orderSheetForm.reset();
   }
+
+  onSubmitForm() {
+    console.log(this.orderSheetForm.value);
+  }
 }
