@@ -3,7 +3,7 @@
   <section class="customer-name">
     <input formControlName="customerName" type="text" placeholder="Your Name">
     <div *ngIf="customerNameControl.errors" class="errors">
-      <div *ngIf="customerNameControl.errors.required">
+      <div *ngIf="customerNameControl.errors.required && (customerNameControl.touched || customerNameControl.dirty)">
         Required!
       </div>
       <div *ngIf="customerNameControl.errors.minlength">
