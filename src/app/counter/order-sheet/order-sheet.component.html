@@ -55,6 +55,11 @@
           <label for="breadSourdoughRoll">Sourdough Roll</label>
         </li>
       </ul>
+      <div *ngIf="orderSheetForm.errors" class="errors">
+        <div *ngIf="orderSheetForm.errors.requiredwhen">
+          Let us know what kind of bread you like!
+        </div>
+      </div>
     </section>
     <section formGroupName="meats">
       <h1>The Meats</h1>

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, FormArray, Validators } from '@angular/forms';
 
+import { CustomValidators } from '../shared/custom-validators';
+
 @Component({
   selector: 'order-sheet',
   templateUrl: 'app/counter/order-sheet/order-sheet.component.html',
@@ -41,6 +43,9 @@ export class OrderSheetComponent {
         veggieTomato: this.formBuilder.control(null),
         veggieMustard: this.formBuilder.control(null)
       })      
+    },
+    {
+      validator: CustomValidators.requiredWhen('bread', 'specialtySandwich')
     });
     this.weirdRequestsControls = this.orderSheetForm.get('weirdRequests') as FormArray;
     this.customerNameControl = this.orderSheetForm.get('customerName');
