@@ -127,7 +127,7 @@
     <h1>Other Notes</h1>
     <textarea formControlName="otherNotes"></textarea>
   </section>
-  <button type="submit">Place Order</button>
+  <button type="submit" [disabled]="!orderSheetForm.valid">Place Order</button>
   <button type="button" (click)="onResetForm()">Reset</button>
 </form>
 <debug-panel [data]="orderSheetForm.value"></debug-panel>
