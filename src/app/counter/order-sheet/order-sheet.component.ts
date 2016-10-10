@@ -44,7 +44,7 @@ export class OrderSheetComponent {
     this.weirdRequestsControls = this.orderSheetForm.get('weirdRequests') as FormArray;
     this.orderSheetForm.get('customerName').valueChanges
       .subscribe(value => {
-        this.showWelcomeMessage = value.toLowerCase().trim() === 'justin s.';
+        this.showWelcomeMessage = value && value.toLowerCase().trim() === 'justin s.';
       });
   }
 
