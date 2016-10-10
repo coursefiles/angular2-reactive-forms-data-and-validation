@@ -46,7 +46,7 @@ export class OrderSheetComponent {
     this.customerNameControl = this.orderSheetForm.get('customerName');
     this.customerNameControl.valueChanges
       .subscribe(value => {
-        this.showWelcomeMessage = value.toLowerCase().trim() === 'justin s.';
+        this.showWelcomeMessage = value && value.toLowerCase().trim() === 'justin s.';
       });
   }
 
