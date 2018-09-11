@@ -1,9 +1,9 @@
 # Angular 2 Forms: Data Binding and Validation
 
-[![Angular 2 Forms: Data Binding and Validation](hero.png)](https://www.lynda.com/AngularJS-tutorials/Angular-2-Forms-Data-Binding-Validation/461451-2.html)  
+[![Angular 2 Forms: Data Binding and Validation](hero.png)](https://www.linkedin.com/learning/angular-2-forms-data-binding-and-validation)  
 
-This is the repository for my course, [Angular 2 Forms: Data Binding and Validation](https://www.lynda.com/AngularJS-tutorials/Angular-2-Forms-Data-Binding-Validation/461451-2.html). 
-The full course is available at [lynda.com](https://lynda.com).  
+This is the repository for my course, [Angular 2 Forms: Data Binding and Validation](https://www.linkedin.com/learning/angular-2-forms-data-binding-and-validation). 
+The full course is available at [LinkedIn Learning](https://www.linkedin.com/learning/angular-2-forms-data-binding-and-validation).  
 
 ## Course Description
 
